@@ -1,0 +1,13 @@
+body{
+    background-image: linear-gradient(to bottom, rgb(33, 95, 175),rgb(139, 166, 216));
+    text-align: center;
+    font-family: 'Courgette', cursive; 
+}
+#certificats{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+img{
+    margin: 10px;
+}

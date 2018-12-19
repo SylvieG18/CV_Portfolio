@@ -1,0 +1,506 @@
+@font-face {
+    font-family: 'Allura-Regular';
+    src: url('../../polices/Allura-Regular.otf') format('opentype');
+    font-size: 4vw;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    font-family: 'Courgette', cursive; 
+    background-color: black;
+}
+#blocPage{  
+    background-image: linear-gradient(to bottom, rgb(33, 95, 175),rgb(139, 166, 216));
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+
+/* ----------------------EN TETE--------------------- */
+header{
+    text-align: center;
+    
+}
+h1{
+    font-family: 'Allura-Regular';
+    font-size: 12vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-shadow: 1px 2px 2px white;
+}
+h1:hover{
+    text-shadow: 1px 2px 2px rgb(36, 50, 112);
+}
+header h2{
+    margin: 0 auto 5px auto;
+    padding: 0 20px;
+    text-shadow: 1px 2px 2px rgb(139, 166, 216);
+    font-size: 4vw;
+    
+}
+
+@media screen and (min-width: 1000px){
+    h1{
+        font-size: 8vw;
+    }
+    header h2{
+        font-size: 3vw;
+    }
+}
+
+/* ----------------------MENU----------------------- */
+nav{
+    display: none;
+}
+@media screen and (min-width: 1000px){
+    nav{
+        display: block;
+        width: 90%;
+        margin: auto;
+        position: sticky;
+        top: 0;
+        height: 80px;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        font-size: 1.5em;
+        padding-top: 0;
+        margin: 0 0 10px 0;
+        padding-left: 0;
+    }
+
+    nav li{
+        list-style: none;
+        padding: 10px;
+        width: 17%;
+        line-height: 60px;
+        text-align: center;
+        background-image: linear-gradient(to bottom, rgb(36, 50, 112),rgb(139, 166, 216));
+    }
+    nav li:first-of-type{
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    nav li:last-of-type{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    nav li:hover{
+        color: white;
+        background-image: linear-gradient(to bottom, rgb(36, 50, 112),rgb(33, 95, 175));   
+    }
+
+    nav a{
+        text-decoration: none;
+    }
+    
+}
+
+/* --------------------- CORPS---------------------- */
+section{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    margin-left: 5%;
+    flex: 1;
+}
+
+
+/* ---------------------------ACCUEIL---------------------- */
+#presentation{
+    background-image: url("../../images/photo_galaxie-1.jpg");
+    background-size: 100% 100%;
+    padding-bottom: 10px;
+    margin-bottom: 5%;
+    color:white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 10px 5px rgb(36, 50, 112);
+}
+#presentation p{
+    width: 80%;
+    margin: auto;    
+}
+
+#presentation #accueil:hover{
+    background-color: rgba(0, 0, 0, 0.5); 
+    background-size: 100% 100%; 
+}
+
+h3{
+    font-size: 6vw;
+    text-shadow: 1px 2px 2px black;
+}
+@media screen and (max-height: 600px){
+    #presentation{
+        display: none;
+    }
+}
+@media screen and (min-height: 600px) and (max-height:750px){
+    #accueil :nth-child(2),#accueil :nth-child(3), #accueil em, #accueil br{
+        display: none; 
+     }
+    #accueil h3{
+        padding: 0 10px;
+    }
+}
+@media screen and (min-height: 750px) and (max-width: 1000px){
+    #accueil :nth-child(3), #accueil em{
+       display: none; 
+    }
+}
+@media screen and (min-width: 1000px){
+    #presentation{
+        margin-top: 20px;
+        
+    }
+    #accueil{
+        padding: 50px;
+    }
+    #presentation p{
+        font-size: 1.5em;
+        padding: 20px;
+    }
+    h3{
+        font-size: 4em;
+        margin: auto;
+    }
+}
+
+
+/* -----------------------CATEGORIES----------------------- */
+#competences, #realisations, #experience, #formation, #contact {
+    background-image: linear-gradient(to bottom, rgb(33, 95, 175),rgb(139, 166, 216));
+    text-align: center;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    box-shadow: 5px 10px 5px rgb(36, 50, 112);
+}
+#competences:hover, #realisations:hover, #experience:hover, #formation:hover, #contact:hover {
+    background-image: linear-gradient(to bottom, rgb(4, 62, 138),rgb(91, 117, 165));
+}
+.categorie {
+    display: flex;
+    margin-left: 10px;
+}
+.categorie h2{
+    flex: 1;
+}
+.categorie img{
+    width: 50px;
+    height: 70px;
+}
+
+#savoir, #exp, #diplomes, #via {
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    display:none;
+}
+@media screen and (min-width: 1000px){
+    #savoir, #exp, #diplomes, #via{
+        display: block;
+    }
+    .categorie img{
+        width: 100px;
+        height: auto;
+    }
+    .categorie h2{
+        font-size: 3em;
+    }
+    
+}
+
+/* ----------------------Compétences------------------- */
+#savoir img{
+    width: auto;
+    height: 50px;
+}
+h5{
+    background-color:  rgb(36, 50, 112);
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+}
+
+#bonnePrat ul, #autres ul{
+    padding-left: 20px;
+    text-align: left;
+}
+@media screen and (min-width: 1000px){
+    #savoir{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 1.2em;
+        padding-bottom: 20px;
+    }
+    #bloc1, #bloc2{
+        width:40%;
+
+    }
+    #savoir img{
+        width: auto;
+        height: 70px;
+        padding-right: 20px;
+    }
+    h5{
+        height: 30px;
+        font-size: 1.2em;
+    }
+    #bloc2 ul{
+        padding-left: 50px;
+    }
+}
+
+
+/* --------------------lien vers portfolio (realisations)---------------- */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+@media screen and (min-width: 1000px){
+    #realisations{
+        display: none;
+    }
+}
+
+/* ----------------------expérience / formation--------------- */
+#exp, #diplomes{
+    padding-bottom: 10px
+}
+.date{ 
+    background-color:  rgb(36, 50, 112);
+    border-radius: 10px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+h4{
+    margin: 0;
+}
+
+.contenu, .poste{
+    display: flex;
+    flex-direction: row;
+}
+.intitule{
+    flex: 1;
+}
+
+#encours{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 0;
+    margin-top: 2px;
+    width: 40px;  
+}
+.lien img{
+    width: 40px;
+}
+
+
+#biais{
+    transform:rotate(-40deg);
+    margin-left: -10px;
+}
+
+
+@media screen and (min-width: 1000px){
+     .date{
+        background-color:rgba(36, 50, 112, 0) ;
+        width: 40%;
+        height: 100%;
+        background-image: linear-gradient(to left,rgb(33, 95, 175),rgb(139, 166, 216));
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        line-height: 100px;
+        color:rgb(36, 50, 112);
+        margin-top: 0;
+        border-right: 2px solid rgb(33, 95, 175);
+    }  
+    
+    .emploi, .etude{
+        display: flex;
+        margin-bottom: 10px;
+        height: 100px;
+        box-shadow: 0 2px 2px rgb(36, 50, 112);
+        border-radius: 10px;
+        
+    }
+    .poste, .contenu{
+        width: 60%;
+        text-align: center;
+        background-image: linear-gradient(to right,rgb(33, 95, 175),rgb(139, 166, 216));
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        align-items: center;
+    }
+    #exp, #diplomes{
+        font-size: 1.2em;
+    }
+    .lien img, #encours{
+        width: 70px;
+        margin-right: 20px;
+    }
+    
+}
+
+@media screen and (min-width: 1300px){
+    .imgLogo img{
+        width: 100px;
+        margin-right: 20px;
+    }
+}
+@media screen and (min-width: 1200px) and (max-width: 1300px){
+    .imgLogo img{
+        width: 80px;
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .imgLogo img{
+        display: none;
+    }
+}
+
+/* ------------------------ CONTACT ----------------- */
+
+#via{
+    border-top: 3px rgb(36, 50, 112) solid;
+    margin-top: 0;
+}
+#coord{
+    display:flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+#coord img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    box-shadow: 0 2px 2px rgb(36, 50, 112);
+    border-radius: 50%;
+}
+#poste, #tel, #email{
+    display:flex;
+    flex-direction: row;
+
+}
+#poste img{
+    margin-top: 20px;
+    width: 45px;
+    height: 45px;
+}
+#portrait img{
+    display: none;
+}
+@media screen and (min-width: 1000px){
+    #coord{
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 1.2em;
+        
+    }
+    #tel, #email{
+        margin-top: 20px;
+    }
+    #formulaire{
+        display: flex;
+        flex-direction: row;
+        padding:0 40px 40px 40px;
+        align-items: center;
+    }
+    #formulaire h4{
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    #portrait{
+        width: 40%;
+        position: relative;
+
+    }
+    #portrait img{
+        opacity: 1;
+        display: block;
+        width: 90%;
+        height: auto;
+        margin: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+        box-shadow: 5px 10px 10px black;
+    }
+    #formulaire .survol{
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+    }
+    #portrait:hover .image{
+        opacity: 0;
+    }
+    #portrait:hover .survol{
+        opacity:1;
+    }
+}
+
+/* -------------------formulaire---------------- */
+form{
+    margin-top: 10px;
+}
+input, textarea{
+    border:none;
+    border-radius: 10px;
+    width: 90%;
+    margin-top: 5px;
+    padding: 5px 10px;
+    box-shadow: 5px 5px 5px rgb(36, 50, 112);
+}
+input[type=submit]{
+    width: 70px;
+    margin-bottom: 10px;
+}    
+input[type=submit]:hover{
+    background-color: chartreuse;
+}   
+    
+@media screen and (min-width: 1000px){
+    #coord{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    input[type=submit]{
+        width: 200px;
+    }
+    input{
+        height: 40px;
+        font-size:1.2em;
+    }
+    textarea{
+        font-size:1.2em;
+    }
+
+
+}
+
+/* --------------------------PIED DE PAGE--------------------- */
+footer{
+    background-image: linear-gradient(to top, rgb(33, 95, 175),rgb(139, 166, 216));
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color:white;
+    padding-left: 15px;
+}
