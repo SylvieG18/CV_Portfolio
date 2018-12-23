@@ -1,0 +1,263 @@
+@font-face {
+    font-family: 'Allura-Regular';
+    src: url('../../polices/Allura-Regular.otf') format('opentype');
+    font-size: 4vw;
+}
+
+body{
+    display: flex;
+    justify-content: center;  
+    font-family: 'Courgette', cursive; 
+    background-color: black;
+}
+#blocPage{  
+    background-image: linear-gradient(to bottom, rgb(33, 95, 175),rgb(139, 166, 216));
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+
+/* ----------------------EN TETE--------------------- */
+header{
+    text-align: center;
+    position: sticky;
+    z-index: 2;
+    top:0;
+    left: 0;
+    background-image: linear-gradient(to bottom, rgb(33, 95, 175),rgb(40, 98, 173));
+    width: 100%;
+}
+h1{
+    font-family: 'Allura-Regular';
+    font-size: 8vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-shadow: 1px 2px 2px white;
+}
+h1:hover{
+    text-shadow: 1px 2px 2px rgb(36, 50, 112);
+}
+header h2{
+    margin: 0 auto 20px auto;
+    padding: 0 20px;
+    text-shadow: 1px 2px 2px rgb(139, 166, 216);
+    font-size: 3vw;
+}
+
+
+@media screen and (min-width: 1000px){
+    h1{
+        font-size: 8vw;
+    }
+    header h2{
+        font-size: 2vw;
+    }
+}
+
+/* -----------------------------------Menu--------------------------- */
+
+
+#hamburger{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    z-index: 4;
+    width: 8%;
+}
+
+
+nav{
+    box-shadow: 2px 5px 5px rgb(36, 50, 112);
+    z-index: 1;
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    border-radius: 5px;
+    background-image:linear-gradient(to bottom, rgb(75, 124, 214),rgb(33, 95, 175));
+}
+
+#liens{
+    display: none;
+}
+ul{
+    padding: 0 10px; 
+}
+
+li{
+    text-align: center;   
+    list-style: none;  
+    margin: 5px auto;
+}
+
+
+li a{
+    text-decoration: none;
+    background-color: rgb(115, 149, 211);
+    color: rgb(36, 50, 112);
+    display: block;
+    padding: 10px 20px;
+    width: 200px;  
+    border: 1px solid rgb(36, 50, 112);
+    border-radius: 5px;
+}
+
+li a:hover{
+    background-color: rgb(36, 50, 112);
+    color: white;   
+}
+
+
+@media screen and (min-width: 1000px){
+    #hamburger{
+        display: none;
+    }
+    /* #liens{
+        display: block;
+    } */
+}
+
+
+
+/* ----------------------------------REALISATIONS--------------------------- */
+
+section {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 5%;
+}
+
+
+.rea{
+    position: relative;
+    margin: 10px;
+}
+
+/* label Grande Ecole du Numérique */
+/* liens git hub    */
+/* bouton test */
+.gen{
+    position: absolute;
+    z-index: 1;
+    top:-10px;
+    left: -20px;
+}
+.lienGitHub{
+    position: absolute;
+    z-index: 1;
+    top:45px;
+    left: -20px;
+}
+.test, .noTest{
+    position: absolute;
+    z-index: 1;
+    top:100px;
+    left: -20px;
+}
+.test2{
+    position: absolute;
+    z-index: 1;
+    top:150px;
+    left: -20px;
+}
+button{
+    padding: 15px 5px;
+    background-color: rgb(116, 235, 116);
+    color: black;
+    border: none;  
+}
+.noV{
+    padding: 5px 2px;
+    background-color: rgb(250,100,80);
+}
+.noV img{
+    width: 35px;
+}
+.test a{
+    text-decoration: none;
+}
+.noMobile, .ipad{
+    display: none;
+}
+.lienGitHub img, .gen img, button{
+    box-shadow: 0 5px 5px black;
+    border-radius: 50%;
+    width: 50px;
+}
+@media screen and (min-width: 700px){
+    .ipad{
+        display: block;
+    }
+} 
+@media screen and (min-width: 1000px){
+    .noMobile{
+        display: block;
+    }
+    .noTest{
+        display: none;
+    }
+}
+
+ /* ------------ effet au survol des apercus ----------------- */
+ .apercu{
+     position: relative;
+     background-color: blue;
+     border-radius: 10px;
+     text-align: center;
+    
+ }
+ .image{
+     opacity: 1;
+     display: block;
+     width: 250px;
+     height: 250px;
+     transition: .5s ease;
+     backface-visibility: hidden;
+     margin-bottom: 20px;
+     box-shadow: 5px 10px 5px rgb(36, 50, 112);
+     border-radius: 10px;
+ }
+ 
+
+ 
+.survol{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 250px;
+    font-size: 0.8em;
+}
+.apercu:hover .image{
+    opacity: 0.3;
+}
+.apercu:hover .survol{
+    opacity: 1;
+}
+.tech{
+    color: white;
+    font-size: 1.5em;
+}
+@media screen and (min-width: 500px){
+    .image, .survol{
+        width: 300px;
+    }
+} 
+ 
+
+
+/* ----------------------------------PIED DE PAGE--------------------- */
+footer{
+    background-image: linear-gradient(to top, rgb(33, 95, 175),rgb(139, 166, 216));
+  
+    color:white;
+    padding-left: 15px;
+}

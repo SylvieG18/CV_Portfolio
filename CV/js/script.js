@@ -55,7 +55,7 @@ if ($(window).width()<1000){
             contact.style.display = "block";
             via.style.display = "block"; 
         } else{
-            via.style.display  = "none";
+            via.style.display = "none";
             presence();       
         }    
     });
@@ -79,8 +79,7 @@ if ($(window).width()<1000){
     }
 }
 
-// VERIFICATION DU FORMULAIRE DE CONTACT
-
+// --------------VERIFICATION DU FORMULAIRE DE CONTACT---------------
 
 // verification saisie nom et prenom
 function verifNom(champ){
@@ -94,11 +93,11 @@ function verifNom(champ){
              (lettre == '_') || (lettre == '/') || (lettre == '\\') || (lettre == '"') ){
                  champ.style.backgroundColor = "rgb(250,100,80)";
                  champ.value = "";
-                 champ.placeholder = "chiffres et caractères spéciaux non autorisés !";
-                
+                 champ.placeholder = "chiffres et caractères spéciaux non autorisés !"; 
+                 verifForm();         
              } else {
-                 champ.style.backgroundColor = "rgb(116,235,116";               
-                 
+                 champ.style.backgroundColor = "rgb(116,235,116)";              
+                 verifForm();
              }
     }  
 };
@@ -110,10 +109,49 @@ function verifMail(champ){
      champ.style.backgroundColor= "rgb(250,100,80)";
      champ.value = "";
      champ.placeholder = "adresse non valide";
+     verifForm();
     } else {
-     champ.style.backgroundColor= "rgb(116,235,116";
+     champ.style.backgroundColor= "rgb(116,235,116)";
+     verifForm();
     }
- }   
+ }  
+
+// textaera non vide
+
+function verifText(champ){
+    if(champ.value != ""){
+        champ.style.backgroundColor= "rgb(116,235,116)";
+        verifForm();
+    } else {
+        champ.style.backgroundColor= "rgb(250,100,80)";
+        champ.placeholder = "absence de message !";
+        verifForm();
+    }
+}
+
+
+// bouton submit
+var nom = document.getElementById('nom');
+var prenom = document.getElementById('prenom');
+var mail = document.getElementById('mail');
+var message = document.getElementById('message');
+var valid = document.getElementById('valid');
+
+valid.onmouseover = verifForm();
+
+function verifForm(){
+    if (nom.style.backgroundColor=="rgb(116, 235, 116)" &&
+        prenom.style.backgroundColor=="rgb(116, 235, 116)" &&
+        mail.style.backgroundColor=="rgb(116, 235, 116)" &&
+        message.style.backgroundColor=="rgb(116, 235, 116)")
+        {
+            valid.style.backgroundColor = "rgb(116,235,116)";
+        } else {
+            valid.style.backgroundColor = "rgb(250,100,80)";
+        }
+}
+
+
 
 
 // changement background au clic dans barre de navigation (version DESKTOP)
@@ -130,8 +168,8 @@ lien1.addEventListener("click",function(){
         lien4.style.backgroundImage = BGimage; 
         lien5.style.backgroundImage = BGimage; 
         lien6.style.backgroundImage = BGimage; 
-        lien1.style.backgroundColor  = "rgb(36, 50, 112)";
-        lien1.style.backgroundImage  = "none";        
+        lien1.style.backgroundColor = "rgb(36, 50, 112)";
+        lien1.style.backgroundImage = "none";        
     } else {
         lien1.style.backgroundImage = BGimage; 
     }  
@@ -143,8 +181,8 @@ lien2.addEventListener("click",function(){
         lien4.style.backgroundImage = BGimage; 
         lien5.style.backgroundImage = BGimage; 
         lien6.style.backgroundImage = BGimage; 
-        lien2.style.backgroundColor  = "rgb(36, 50, 112)";
-        lien2.style.backgroundImage  = "none";        
+        lien2.style.backgroundColor = "rgb(36, 50, 112)";
+        lien2.style.backgroundImage = "none";        
     } else {
         lien2.style.backgroundImage = BGimage; 
     }  
@@ -156,8 +194,8 @@ lien4.addEventListener("click",function(){
         lien2.style.backgroundImage = BGimage;  
         lien5.style.backgroundImage = BGimage; 
         lien6.style.backgroundImage = BGimage; 
-        lien4.style.backgroundColor  = "rgb(36, 50, 112)";
-        lien4.style.backgroundImage  = "none";        
+        lien4.style.backgroundColor = "rgb(36, 50, 112)";
+        lien4.style.backgroundImage = "none";        
     } else {
         lien4.style.backgroundImage = BGimage; 
     }  
@@ -169,8 +207,8 @@ lien5.addEventListener("click",function(){
         lien2.style.backgroundImage = BGimage; 
         lien4.style.backgroundImage = BGimage;  
         lien6.style.backgroundImage = BGimage; 
-        lien5.style.backgroundColor  = "rgb(36, 50, 112)";
-        lien5.style.backgroundImage  = "none";        
+        lien5.style.backgroundColor = "rgb(36, 50, 112)";
+        lien5.style.backgroundImage = "none";        
     } else {
         lien5.style.backgroundImage = BGimage; 
     }  
@@ -182,8 +220,8 @@ lien6.addEventListener("click",function(){
         lien2.style.backgroundImage = BGimage; 
         lien4.style.backgroundImage = BGimage; 
         lien5.style.backgroundImage = BGimage; 
-        lien6.style.backgroundColor  = "rgb(36, 50, 112)";
-        lien6.style.backgroundImage  = "none";        
+        lien6.style.backgroundColor = "rgb(36, 50, 112)";
+        lien6.style.backgroundImage = "none";        
     } else {
         lien6.style.backgroundImage = BGimage; 
     }  

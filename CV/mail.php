@@ -24,3 +24,7 @@ if (isset($_POST['nom']) AND isset($_POST['prenom'])  AND isset($_POST['mail']) 
     header ('location: index.php');
 
     ?>
+
+
+<!-- QR code du cv en ligne
+<a href='http://www.unitag.io/qrcode'><img src='http://www.unitag.io/qreator/generate?crs=xnjFkEn%252FP85fCPDXJ%252FXXKg5g6yQi7H4qzUlRVUntU035Re8CX7iHj071HbqF%252BCfYW0fkByoDtlWAYEP%252FkF2dipjP8Ux69VtYkusoonlKTAkgSRnmfwEzhpz3ulb%252BfgcH8xxrpOTbfLtqZS7YE5Pf9g%253D%253D&crd=fhOysE0g3Bah%252BuqXA7NPQ5wC14dlbAdKB5a1P2KEU3MgSf8l8VdBkAsztzTfgHq%252BSIhxrEUB4u0S158jJ42fU43ji0j%252Fj8WjzFGsVcE7kOiPpSjWh4XManZbTU6a%252BCeD' alt='QR Code'/></a> -->

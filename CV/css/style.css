@@ -42,6 +42,9 @@ header h2{
     font-size: 4vw;
     
 }
+header h2 em{
+    font-size: 2vw;
+}
 
 @media screen and (min-width: 1000px){
     h1{
@@ -125,14 +128,15 @@ section{
     border-radius: 10px;
     box-shadow: 5px 10px 5px rgb(36, 50, 112);
 }
-#presentation p{
-    width: 80%;
-    margin: auto;    
-}
 
 #presentation #accueil:hover{
     background-color: rgba(0, 0, 0, 0.5); 
     background-size: 100% 100%; 
+    border-radius: 10px;
+}
+#presentation p{
+    width: 80%;
+    margin: auto;    
 }
 
 h3{
@@ -280,7 +284,7 @@ a {
 #exp, #diplomes{
     padding-bottom: 10px
 }
-.date{ 
+.dateE, .dateF{ 
     background-color:  rgb(36, 50, 112);
     border-radius: 10px;
     color: white;
@@ -291,6 +295,9 @@ a {
 h4{
     margin: 0;
 }
+h4 em{
+    font-size: 0.8em;
+}
 
 .contenu, .poste{
     display: flex;
@@ -300,14 +307,22 @@ h4{
     flex: 1;
 }
 
+.intitule img{
+    width: 20px;
+}
+.logoForm img{
+    height: 40px;
+    margin-right: 20px;
+}
+
 #encours{
     border: 1px solid black;
     border-radius: 5px;
     padding: 5px 0;
-    margin-top: 2px;
-    width: 40px;  
+    margin-top: 2px; 
+    width: 40px;
 }
-.lien img{
+.dipl img{
     width: 40px;
 }
 
@@ -319,9 +334,8 @@ h4{
 
 
 @media screen and (min-width: 1000px){
-     .date{
+     .dateE, .dateF{
         background-color:rgba(36, 50, 112, 0) ;
-        width: 40%;
         height: 100%;
         background-image: linear-gradient(to left,rgb(33, 95, 175),rgb(139, 166, 216));
         border-top-right-radius: 0;
@@ -330,7 +344,13 @@ h4{
         color:rgb(36, 50, 112);
         margin-top: 0;
         border-right: 2px solid rgb(33, 95, 175);
+    }
+    .dateE{
+        width: 40%; 
     }  
+    .dateF{
+        width: 30%;
+    }
     
     .emploi, .etude{
         display: flex;
@@ -340,20 +360,29 @@ h4{
         border-radius: 10px;
         
     }
-    .poste, .contenu{
-        width: 60%;
+    .poste, .contenu{    
         text-align: center;
         background-image: linear-gradient(to right,rgb(33, 95, 175),rgb(139, 166, 216));
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
         align-items: center;
     }
+    .poste{
+        width: 60%;
+    }
+    .contenu{
+        width: 70%;
+    }
     #exp, #diplomes{
         font-size: 1.2em;
     }
-    .lien img, #encours{
+    .dipl img{
         width: 70px;
         margin-right: 20px;
+    }
+    #encours{
+        width: 50px;
+        margin-right: 30px;
     }
     
 }
@@ -363,17 +392,38 @@ h4{
         width: 100px;
         margin-right: 20px;
     }
+    .logoForm img{
+        height: 70px;
+        margin-right: 20px;
+    }
+    .intitule{
+        flex: 2;
+    }
+    .logoForm{
+        flex:1;
+    }
 }
 @media screen and (min-width: 1200px) and (max-width: 1300px){
     .imgLogo img{
         width: 80px;
         margin-right: 10px;
     }
+    .logoForm img{
+        height: 50px;
+        margin-right: 20px;
+    }
+    .intitule{
+        flex: 2;
+    }
+    .logoForm{
+        flex:1;
+    }
 }
 @media screen and (max-width: 1200px){
-    .imgLogo img{
+    .imgLogo img,.logoForm img{
         display: none;
     }
+    
 }
 
 /* ------------------------ CONTACT ----------------- */
@@ -472,10 +522,8 @@ input, textarea{
 input[type=submit]{
     width: 70px;
     margin-bottom: 10px;
+    font-weight: bold;
 }    
-input[type=submit]:hover{
-    background-color: chartreuse;
-}   
     
 @media screen and (min-width: 1000px){
     #coord{
